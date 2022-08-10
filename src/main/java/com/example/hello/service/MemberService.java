@@ -4,12 +4,15 @@ import java.util.*;
 
 import com.example.hello.domain.Member;
 import com.example.hello.repository.MemberRepository;
-import com.example.hello.repository.MemoryMemberRepository;
 
 
 public class MemberService {
 	
-	private final MemberRepository memberRepository = new MemoryMemberRepository();
+	private final MemberRepository memberRepository;
+	
+	public MemberService(MemberRepository memberRepository) {
+		this.memberRepository = memberRepository;
+	}
 	
 	/**
 	 * 회원가입
