@@ -2,7 +2,9 @@ package com.example.hello.repository;
 
 import java.util.*;
 
+import org.springframework.stereotype.Repository;
 import com.example.hello.domain.Member;
+
 
 public class MemoryMemberRepository implements MemberRepository {
 	
